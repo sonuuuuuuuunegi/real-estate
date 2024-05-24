@@ -2,6 +2,7 @@ import { FaSearch } from 'react-icons/fa';
 import { Link, useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import ThemeSwitcher from './ThemeSwitcher';
 
 export default function Header() {
   const {currentUser}=useSelector(state=>state.user);
@@ -63,6 +64,9 @@ export default function Header() {
             
             
         </ul>
+        <div className='flex justify-end items-center'>
+          <ThemeSwitcher/>
+          </div>
         </div>
     </header>
   )
